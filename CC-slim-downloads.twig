@@ -8,7 +8,7 @@
   {% for file in episode.files %}
     {% if file.asset.downloadable %}
     <td>
-      <a href="{{ file.publicUrl("downloads", "buttonlist") }}">{{ file.asset.title }}</a> ({{ file.size|formatBytes }})
+      <a href="{{ file.publicUrl("downloads", "buttonlist") }}" download>{{ file.asset.title }}</a> ({{ file.size|formatBytes }})
     </td>
     {% endif %}
 	{% endfor %}
