@@ -1,12 +1,12 @@
 <table>
     <thead>
 		<th></th>
-		<th>Datum</th>
-		<th>Titel</th>
-		<th>Dauer</th>
+		<th>Date</th>
+		<th>Title</th>
+		<th>Duration</th>
 	</thead>
 	<tbody>
-	{% for episode in podcast.episodes({category: "episoden"}) %}
+	{% for episode in podcast.episodes({category: "lectures"}) %}
 		<tr class="podcast_archive_element">
 			<td class="thumbnail">
 				<img src="{{ episode.image({fallback: true}) }}" width="64" height="64">
