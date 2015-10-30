@@ -6,10 +6,10 @@
   </td>
   <td><strong>⬇ Downloads:</strong></td>
   {% for file in episode.files %}
-    {% if file.asset.downloadable %}
+  {% if file.downloadable %}
     <td>
       <a href="{{ file.publicUrl("downloads", "buttonlist") }}" download>{{ file.asset.title }}</a> ({{ file.size|formatBytes }})
     </td>
     {% endif %}
-	{% endfor %}
+  {% endfor %}
 </table>
