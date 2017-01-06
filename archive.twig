@@ -1,11 +1,11 @@
 <table>
     <thead>
 		<th>Datum</th>
-		<th>Titel</th>
-		<th>h:min</th>
+		<th>Titel &amp; Themen</th>
+		<th>Dauer</th>
 	</thead>
 	<tbody>
-	{% for episode in podcast.episodes({category: "episoden"}) %}
+	{% for episode in podcast.episodes %}
 		<tr class="podcast_archive_element">
 			<td class="date">
 				<span class="release_date">
@@ -20,7 +20,7 @@
 				</td>
 				<td class="duration">
 					{% set duration = episode.duration %}
-					{{ duration.hours }}:{{ duration.minutes|padLeft("0",2) }}
+					<strong>{{ duration.hours }}h {{ duration.minutes|padLeft("0",2)}}min</strong>
 				</td>
 			</tr>
 		{% endfor %}
@@ -29,6 +29,6 @@
 
 <style type="text/css">
 	.podcast_archive_element td {
-		vertical-align: top;
+		vertical-align: middle;
 		}
 </style>
