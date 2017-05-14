@@ -9,7 +9,8 @@
 		<tr class="podcast_archive_element">
 			<td class="date">
 				<span class="release_date">
-					{{ episode.publicationDate.format('j. F Y') }}
+					{{ episode.publicationDate.format('F Y') }}
+					<!-- https://secure.php.net/manual/en/function.date.php -->
 				</span>
 			</td>
 			<td class="title">
