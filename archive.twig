@@ -21,7 +21,9 @@
 				</td>
 				<td class="duration">
 					{% set duration = episode.duration %}
-					<strong>{{ duration.hours }}h {{ duration.minutes|padLeft("0",2)}}min</strong>
+					<strong>
+					    {% if duration.hours > 0 %} {{ duration.hours }}h{% endif %} {{ duration.minutes|padLeft("0",2)}}min
+					</strong>
 				</td>
 			</tr>
 		{% endfor %}
